@@ -8,7 +8,13 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ReactiveFormComponent implements OnInit {
   
-  constructor() { }
+  constructor() {   
+  //   this.signupForm=new FormGroup ({
+  //   'username' : new FormControl(null),
+  //   'email' : new FormControl(null),
+  //   'gender' : new FormControl('male')
+  // })
+}
   genders =['male', 'female'];
   signupForm : FormGroup  ;
   ngOnInit(): void {
@@ -18,5 +24,9 @@ export class ReactiveFormComponent implements OnInit {
       'gender' : new FormControl('male')
     })
   } 
+
+  submit() :void {
+   console.log(this.signupForm.value);
+  }
 
 }

@@ -1,17 +1,28 @@
-<h1>reactive-form works!</h1>
-<div>
- <form [formGroup]="signupForm">
+
+<div class="container row col-6">
+    <h4>Reactive Form Example</h4>
+ <form [formGroup]="signupForm" (submit)="submit()">
     <div class="form-group">
-        <label for="userName">Username</label>
-        <input type="text" id="userName" formControlName="userName" class="form-control"/>
+        
+        <label class="" for="username">Name</label>
+        <input type="text" id="username" formControlName="username" class="form-control"/>
     </div>
     <div class="form-group">
-        <label for="userName">Username</label>
-        <input type="text" id="userName" formControlName="userName" class="form-control"/>
+        <label for="email">Email id</label>
+        <input type="text" id="email" formControlName="email" class="form-control"/>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else. And it should be from @angular.com</small>
+    </div>
+    <div >
+        <label for="gender">Gender</label>
+         <div class="radio" *ngFor="let gender of genders">
+            <label>
+                <input type="radio" id="gender" formControlName="gender" [value]="gender"/>
+                <span>{{gender}}</span>
+            </label>
     </div>
     <div class="form-group">
-        <label for="userName">Username</label>
-        <input type="text" id="userName" formControlName="userName" class="form-control"/>
+<button type="submit" class="btn-primary">Submit</button>
+    </div>
     </div>
  </form>
 </div>
