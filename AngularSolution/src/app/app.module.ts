@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { LowerCaseUrlSerializer } from './lowe-case-url-serializer';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { Validation } from './validation';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReactiveFormComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
