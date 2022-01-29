@@ -20,6 +20,19 @@ export class ReactiveFormComponent implements OnInit {
       'email' : new FormControl(null, [Validators.required,Validators.email,this.validate.emailValidate]),
       'gender' : new FormControl('male',[Validators.required])
     })
+    // for tracking change in value of fields
+    // this.signupForm.valueChanges.subscribe(
+    //   valuechange=>{
+    //     console.log(valueChanges);
+    //   }
+    // )
+
+    // for changein status of the form
+    // this.signupForm.statusChanges.subscribe(
+    //   statusChange=>{
+    //     console.log(statusChange);
+    //   }
+    // )
   } 
 
   submit() :void {
