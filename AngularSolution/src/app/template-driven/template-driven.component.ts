@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {}
+  
+  ngOnInit() {}
+  
+  displayStyle = "none";
+  
+  openPopup() {
+    this.displayStyle = "block";
   }
-
+  closePopup() {
+    this.displayStyle = "none";
+  }
 }
